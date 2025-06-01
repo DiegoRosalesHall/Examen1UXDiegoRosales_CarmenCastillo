@@ -29,40 +29,61 @@ export default function Home() {
     //FrontEnd
 
     <center>
-      <div style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100vw',
-        height: '100vh',
-        backgroundImage: 'url("/img/fondo.jpg")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        zIndex: -1,
-      }}
-      />
-      <div className={`container-fluid p-0 m-0 ${style.idk}`}>
-        <div className="row align-items-center gx-0" style={{ marginTop: "28px" }}>
-          {/* Logo - izquierda */}
-          <div className="col-6 col-lg-4 d-flex justify-content-start ps-4 order-1 order-lg-1">
-            <img src="/img/logomax.png" alt="Logo" style={{ height: "40px" }} />
-          </div>
+  {/* Fondo fijo detrás */}
+  <div
+    style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100vw',
+      height: '100vh',
+      backgroundImage: 'url("/img/fondo.jpg")',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      zIndex: -1,
+    }}
+  />
 
-          {/* Searchbar, user y favoritos - derecha */}
-          <div className="col-6 col-lg-4 d-flex justify-content-end pe-4 order-2 order-lg-3">
-            <h1 style={{ color: "white" }}>algo mas</h1>
-          </div>
+  {/* Fila fija del header */}
+  <div
+    className="container-fluid p-0 m-0"
+    style={{
+      position: "fixed",
+      top: 0,
+      left: 0,
+      width: "100%",
+      zIndex: 999,
+      backgroundColor: "rgba(0, 0, 0, 0.6)"
+    }}
+  >
+    <div className="row align-items-center gx-0" style={{ padding: "10px 0" }}>
+      {/* Logo */}
+      <div className="col-6 col-lg-4 d-flex justify-content-start ps-4 order-1 order-lg-1">
+        <img src="/img/logomax.png" alt="Logo" style={{ height: "40px" }} />
+      </div>
 
-          {/* Navbar - centro */}
-          <div className="col-12 col-lg-4 d-flex justify-content-center order-3 order-lg-2 navbar-up-desktop " style={{ marginTop: '10px', color: "white", fontWeight: "bolder" }}>
-            <Navbar /> 
-          </div>
-        </div>
+      {/* Algo mas */}
+      <div className="col-6 col-lg-4 d-flex justify-content-end pe-4 order-2 order-lg-3">
+        <h1 style={{ color: "white" }}>algo más</h1>
       </div>
-      <div >
-        <Carrusel /> {/* fokin jel me duele la espalda */}
+
+      {/* Navbar */}
+      <div className="col-12 col-lg-4 d-flex justify-content-center order-3 order-lg-2 navbar-up-desktop" style={{ marginTop: '10px', color: "white", fontWeight: "bolder" }}>
+        <Navbar />
       </div>
-    </center>
+    </div>
+  </div>
+
+  {/* Espacio para que el contenido de abajo no quede oculto por la barra fija */}
+  <div style={{ height: "100px" }}></div>
+
+  {/* Carrusel */}
+  <div className="container-fluid p-0 m-0">
+    <div className="row align-items-center gx-0">
+      <Carrusel />
+    </div>
+  </div>
+</center>
 
   );
 }

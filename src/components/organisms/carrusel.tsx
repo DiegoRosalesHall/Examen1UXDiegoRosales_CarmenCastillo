@@ -6,7 +6,7 @@ import Descripcion from "../molecules/descripcion"
 
 const Carrusel = () => {
     const [indice, setIndice] = useState(0);
-    const peliculas = [{ src: "../img/carrusel1.webp", titulo: "Película 1", descripcion: "Descripción 1" }, { src: "../img/carrusel2.webp", titulo: "Película 1", descripcion: "Descripción 1" }, { src: "../img/carrusel3.webp", titulo: "Película 1", descripcion: "Descripción 1" }];
+    const peliculas = [{ src: "../img/carrusel1.webp", titulo: "../img/cartitulo1.webp", descripcion: "Descripción 1" }, { src: "../img/carrusel2.webp", titulo: "../img/cartitulo2.webp", descripcion: "Descripción 2" }, { src: "../img/carrusel3.webp", titulo: "../img/cartitulo3.webp", descripcion: "Descripción 3" }, { src: "../img/carrusel4.webp", titulo: "../img/cartitulo4.webp", descripcion: "Descripción 4" }, { src: "../img/carrusel5.webp", titulo: "../img/cartitulo5.webp", descripcion: "Descripción 5" }, { src: "../img/carrusel6.webp", titulo: "../img/cartitulo6.webp", descripcion: "Descripción 6" } ];
 
     const siguiente = () => {
         if (indice < peliculas.length - 1) {
@@ -40,7 +40,7 @@ const Carrusel = () => {
                 {peliculas.map((pelicula, i) => (
                     <div key={i} className={`carousel-item ${i === indice ? "active" : ""}`}>
                         <Poster src={pelicula.src} alt={pelicula.titulo} />
-                        <Descripcion src={"../img/cartitulo1.webp"} descripcion={pelicula.descripcion} />
+                        <Descripcion src={pelicula.titulo} descripcion={pelicula.descripcion} />
                     </div>
                 ))}
             </div>

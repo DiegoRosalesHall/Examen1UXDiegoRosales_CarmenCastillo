@@ -4,7 +4,7 @@ import styles from './Navbar.module.css';
 const Navbar = () => {
   return (
     <nav>
-      <ul className="navbar-nav flex-row gap-4">
+      <ul className="navbar-nav flex-row gap-4 ">
         <li className="nav-item">
           <a className={`nav-link ${styles.link}`} href="#">Inicio</a>
         </li>

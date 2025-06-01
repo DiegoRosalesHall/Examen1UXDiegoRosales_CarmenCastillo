@@ -1,24 +1,97 @@
+@font-face {
+    font-family: 'medium';
+    src: url('/fonts/FiraSans-Medium.ttf') format('truetype');
+}
+
+.boton {
+    display: flex;
+    font-size: 14px;
+    text-align: left;
+    padding: 5px 10px;
+    background-color: #3d3a37 !important;
+    font-family: 'medium', sans-serif !important;
+}
+
 .tituloimagen {
     width: 50%;
-    max-width: 300px;
+    max-width: 600px;
     height: auto;
     display: block;
 }
 
-.contenedortitulo {
-    display: flex;
-    justify-content: center;
-    /* centrado en pantallas chiq */
-    align-items: center;
+.descripcion {
+    white-space: pre-wrap;
+    text-align: left;
 }
 
-/* grandes a la izquierda */
-@media (min-width: 1200px) {
-    .contenedor-titulo {
+.boton :hover {
+    background-color: #7a7a78;
+
+}
+
+/* pantallas grandes */
+@media (min-width: 1080px) {
+
+    .tituloimagen {
+        max-width: 600px !important;
+        height: auto;
+        display: block;
+    }
+
+    .contenedortitulo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        left: 140px;
+        top: 30%;
+    }
+
+    .descripcion {
+        white-space: pre-wrap;
+        text-align: left;
+    }
+
+    .boton {
+        background-color: #3d3a37;
+        display: flex;
+        font-size: 20px;
+        text-align: left;
+        padding: 10px 30px;
+        border: none !important;
+        font-family: 'medium', sans-serif !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .descripcion {
+        white-space: pre-wrap;
+        text-align: left;
+        font-size: 14px;
+        text-align: center;
+        padding: 5px 10px;
+    }
+
+    .boton {
+        display: inline-block;
+        font-size: 14px;
+        text-align: center;
+        padding: 5px 10px;
+        background-color: #3d3a37 !important;
+        font-family: 'medium', sans-serif !important;
+    }
+
+    .contenedortitulo {
         justify-content: flex-start;
     }
 
-    .titulo-imagen {
-        max-width: 300px;
+    .tituloimagen {
+        max-width: 250px;
+        height: auto;
+        display: inline-block;
+    }
+
+    .carruselimage {
+        height: 550px;
+        object-fit: cover;
     }
 }

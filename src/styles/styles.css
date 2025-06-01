@@ -6,13 +6,13 @@
 }
 
 @font-face {
-    font-family: 'Chonky_Bunny';
-    src: url('fonts/Chonky_Bunny.ttf') format('truetype');
+    font-family: 'Fra-Sans-M';
+    src: url('fonts/FiraSans-Medium.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'chill';
-    src: url('fonts/Chill\ Chrip\ Free.otf') format('truetype');
+    font-family: 'Fra-Sans-M';
+    src: url('fonts/FiraSans-Regular.otf') format('truetype');
 }
 @media (min-width: 992px) {
   .navbar-up-desktop {

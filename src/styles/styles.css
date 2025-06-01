@@ -14,3 +14,8 @@
     font-family: 'chill';
     src: url('fonts/Chill\ Chrip\ Free.otf') format('truetype');
 }
+@media (min-width: 992px) {
+  .navbar-up-desktop {
+    margin-top: -10px; /* sube 10px el navbar en desktop */
+  }
+}

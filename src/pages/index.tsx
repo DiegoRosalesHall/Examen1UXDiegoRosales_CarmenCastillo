@@ -2,6 +2,7 @@
   import Image from "next/image";
   import { Geist, Geist_Mono } from "next/font/google";
   import styles from "@/styles/Home.module.css";
+  import Navbar from "@/components/molecules/Navbar";
   import 'bootstrap/dist/css/bootstrap.min.css';
   import { useEffect, useState } from 'react';
   const geistSans = Geist({
@@ -37,28 +38,26 @@
           backgroundPosition: 'center',
           zIndex: -1,
           }}
-        >
-        </div> 
-
+        />
         <div className="container-fluid p-0 m-0">
-          <div className="row m-0">
-            <div className="col-auto p-0 " style={{ marginLeft: '4vw', marginTop:'28px'} } >
-              <img
-              src = "/img/logomax.png"
-              width={"110px"}
-              height={"30px"}
-              sizes="30px"
-              className="img-fluid"
-              />
+          <div className="row align-items-center gx-0" style={{ marginTop: "28px" }}>
+            {/* Logo - izquierda */}
+            <div className="col-6 col-lg-4 d-flex justify-content-start ps-4 order-1 order-lg-1">
+              <img src="/img/logomax.png" alt="Logo" style={{ height: "40px" }} />
             </div>
-            <div className = "col">
-              <h1 style={{color: "white"}}> aqui ira navbar</h1>
+
+            {/* Searchbar, user y favoritos - derecha */}
+            <div className="col-6 col-lg-4 d-flex justify-content-end pe-4 order-2 order-lg-3">
+              <h1 style={{color:"white"}}>algo mas</h1>
             </div>
-            <div className = "col">
-              <h1 style={{color: "white"}}> aqui iran  ajustes</h1>
+
+            {/* Navbar - centro */}
+            <div className="col-12 col-lg-4 d-flex justify-content-center order-3 order-lg-2 navbar-up-desktop" style={{ marginTop: '10px', color:"white", fontWeight:"bolder" }}>
+              <Navbar />
             </div>
           </div>
         </div>
       </center>
+      
     );
   }

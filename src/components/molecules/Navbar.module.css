@@ -1,0 +1,13 @@
+.link {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.link:hover,
+.link.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

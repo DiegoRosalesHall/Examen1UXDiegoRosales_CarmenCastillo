@@ -40,7 +40,7 @@ const Carrusel = () => {
                 {peliculas.map((pelicula, i) => (
                     <div key={i} className={`carousel-item ${i === indice ? "active" : ""}`}>
                         <Poster src={pelicula.src} alt={pelicula.titulo} />
-                        <Descripcion titulo={pelicula.titulo} descripcion={pelicula.descripcion} />
+                        <Descripcion src={"../img/cartitulo1.webp"} descripcion={pelicula.descripcion} />
                     </div>
                 ))}
             </div>

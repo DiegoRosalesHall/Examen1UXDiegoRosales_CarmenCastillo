@@ -1,0 +1,24 @@
+.tituloimagen {
+    width: 50%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+}
+
+.contenedortitulo {
+    display: flex;
+    justify-content: center;
+    /* centrado en pantallas chiq */
+    align-items: center;
+}
+
+/* grandes a la izquierda */
+@media (min-width: 1200px) {
+    .contenedor-titulo {
+        justify-content: flex-start;
+    }
+
+    .titulo-imagen {
+        max-width: 300px;
+    }
+}

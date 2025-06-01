@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Navbar from "@/components/molecules/Navbar";
+import style from "@/components/molecules/Navbar.module.css";
 import Carrusel from "@/components/organisms/carrusel";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
@@ -40,7 +41,7 @@ export default function Home() {
         zIndex: -1,
       }}
       />
-      <div className="container-fluid p-0 m-0">
+      <div className={`container-fluid p-0 m-0 ${style.idk}`}>
         <div className="row align-items-center gx-0" style={{ marginTop: "28px" }}>
           {/* Logo - izquierda */}
           <div className="col-6 col-lg-4 d-flex justify-content-start ps-4 order-1 order-lg-1">
@@ -53,13 +54,13 @@ export default function Home() {
           </div>
 
           {/* Navbar - centro */}
-          <div className="col-12 col-lg-4 d-flex justify-content-center order-3 order-lg-2 navbar-up-desktop" style={{ marginTop: '10px', color: "white", fontWeight: "bolder" }}>
-            <Navbar />
+          <div className="col-12 col-lg-4 d-flex justify-content-center order-3 order-lg-2 navbar-up-desktop " style={{ marginTop: '10px', color: "white", fontWeight: "bolder" }}>
+            <Navbar /> 
           </div>
         </div>
       </div>
-      <div className="main">
-        <Carrusel /> {/* Aquí se muestra el carrusel */}
+      <div >
+        <Carrusel /> {/* fokin jel me duele la espalda */}
       </div>
     </center>
 
